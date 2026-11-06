@@ -26,6 +26,19 @@ Buka `index.html` di browser, atau buka folder project di VS Code dan pilih **Op
 
 Unduh project melalui tombol **Code > Download ZIP** di repository GitHub, ekstrak file ZIP, lalu buka `index.html` di browser.
 
+## Struktur Project
+
+```text
+Adeevanvansyah_24011130331_UTS_VillaPermai/
+├── index.html
+├── style.css
+├── script.js
+├── README.md
+└── assets/
+    ├── villa-permai-desktop-full.png
+    └── villa-permai-mobile-full.png
+```
+
 ## Status Fitur
 
 - [x] Menampilkan tiga vila beserta tipe, lokasi, fasilitas, harga, dan status
@@ -40,13 +53,15 @@ Unduh project melalui tombol **Code > Download ZIP** di repository GitHub, ekstr
 
 ## Tangkapan Layar
 
-### Tampilan Desktop — Daftar Vila
+Screenshot di bawah merupakan tangkapan satu halaman penuh, bukan potongan terpisah. Gambar mencakup halaman aplikasi dari header hingga footer.
 
-![Tampilan desktop Villa Permai](assets/villa-permai-desktop.png)
+### Tampilan Desktop
+
+![Tampilan penuh Villa Permai pada desktop](assets/villa-permai-desktop-full.png)
 
 ### Tampilan Mobile
 
-![Tampilan mobile Villa Permai](assets/villa-permai-mobile.png)
+![Tampilan penuh Villa Permai pada mobile](assets/villa-permai-mobile-full.png)
 
 ## Cara Menggunakan Aplikasi
 
@@ -60,18 +75,21 @@ Riwayat dapat dilihat kembali selama data browser tidak dihapus dan aplikasi dib
 
 ## Riwayat Commit
 
-Riwayat lengkap tersedia di [GitHub Commits](https://github.com/adeevan2024-m-design/Adeevanvansyah_24011130331_UTS_VillaPermai/commits/main/). Untuk melihat riwayat dari terminal:
+Riwayat lengkap dan terbaru tersedia di [GitHub Commits](https://github.com/adeevan2024-m-design/Adeevanvansyah_24011130331_UTS_VillaPermai/commits/main/). Untuk melihatnya dari terminal:
 
 ```bash
 git log --oneline
 ```
 
-Commit pengembangan utama:
+Riwayat commit utama:
 
-- `Initial commit` — menambahkan file awal aplikasi
-- `docs: refresh README and add gitignore` — memperbarui dokumentasi awal
-- `docs: add app preview and usage guide` — menambahkan panduan dan preview aplikasi
-- `docs: add mobile screenshot to README` — menambahkan screenshot mobile
+```text
+3183a04 docs: format README with student info and screenshots
+0385a06 docs: add mobile screenshot to README
+1624460 docs: add app preview and usage guide
+5433539 docs: refresh README and add gitignore
+0e107be Initial commit
+```
 
 ## Teknologi
 
