@@ -1,6 +1,6 @@
 # Aplikasi Pemesanan Vila Permai
 
-Project UTS Teknologi Web berupa website katalog dan simulasi pemesanan vila. Villa Permai dikelola dari kawasan Puncak, Bogor. Pengunjung dapat melihat pilihan vila di beberapa lokasi, mencari berdasarkan nama atau fasilitas, mengisi form, lalu melihat perkiraan harga dan menyimpan simulasi pesanannya di browser.
+Project UTS Teknologi Web berupa website katalog dan simulasi pemesanan vila dengan tampilan resort premium yang responsif. Villa Permai dikelola dari kawasan Puncak, Bogor. Pengunjung dapat melihat pilihan vila di beberapa lokasi, mencari berdasarkan nama atau fasilitas, mengisi form, lalu melihat perkiraan harga dan menyimpan simulasi pesanannya di browser.
 
 ## Identitas
 
@@ -10,23 +10,28 @@ Project UTS Teknologi Web berupa website katalog dan simulasi pemesanan vila. Vi
 
 ## Sekilas tentang aplikasi
 
-Halaman menampilkan Vila Khayangan, Villa Lembah Koi, dan Villa So Long Banyuwangi lengkap dengan foto, lokasi, jumlah kamar, fasilitas, harga per malam, dan status. Villa So Long Banyuwangi tetap ditampilkan dengan nama dan lokasi vilanya; identitas pemilik dan layanan Villa Permai berada di Puncak, Bogor. Kolom pencarian bisa digunakan untuk mencari nama, lokasi, maupun fasilitas. Pemesanan dilakukan melalui form di halaman yang sama.
+Halaman menampilkan Vila Khayangan, Villa Lembah Koi, dan Villa So Long Banyuwangi lengkap dengan foto, lokasi, jumlah kamar, fasilitas, harga per malam, dan status. Villa So Long Banyuwangi tetap ditampilkan dengan nama dan lokasi vilanya; identitas pemilik dan layanan Villa Permai berada di Puncak, Bogor. Pengunjung dapat mencari vila, menyaring ketersediaan, mengurutkan harga, dan menyimpan pilihan favorit.
 
-Harga dihitung dari jumlah malam. Untuk setiap tamu di atas dua orang, ada tambahan Rp100.000 per malam. Sebelum pesanan disimpan, aplikasi memeriksa isian form, tanggal, jumlah tamu, dan status vila.
+Harga dihitung dari jumlah malam. Untuk setiap tamu di atas dua orang, ada tambahan Rp100.000 per malam. Estimasi diperbarui saat tanggal dan jumlah tamu diisi. Sebelum simulasi permintaan disimpan, aplikasi memeriksa isian form, tanggal, jumlah tamu, dan status vila.
 
 ### Yang bisa dicoba
 
 - Cari kata seperti `Khayangan`, `Banyuwangi`, atau `WiFi`.
 - Coba pilih Villa So Long Banyuwangi untuk melihat pesan bahwa vila sedang penuh.
-- Isi form dengan tanggal check-in dan check-out, lalu pilih **Cek Ketersediaan** untuk melihat rincian biaya.
-- Pilih **Pesan Sekarang** untuk menambahkan simulasi pesanan ke riwayat.
+- Isi form dengan tanggal check-in dan check-out, lalu lihat estimasi biaya langsung atau pilih **Cek ketersediaan** untuk memeriksa tanggal.
+- Pilih **Kirim permintaan** untuk menyimpan simulasi pesanan ke riwayat perangkat.
+- Gunakan filter ketersediaan dan urutan harga untuk membandingkan pilihan.
+- Tekan ikon hati pada kartu vila untuk menyimpan favorit. Favorit disimpan pada perangkat.
+- Pilih **Pilih vila** pada kartu yang tersedia untuk mengisi vila di formulir pemesanan.
 
 ## Pembaruan tampilan dan konten
 
 - Memperbarui daftar vila menjadi Vila Khayangan, Villa Lembah Koi, dan Villa So Long Banyuwangi.
 - Menambahkan foto setiap vila ke folder `assets/` dan menampilkannya pada kartu vila.
-- Memperbarui tampilan dengan header bergambar, kartu foto, tata letak form yang lebih rapi, dan desain responsif untuk ponsel maupun desktop.
+- Memperbarui tampilan dengan hero fotografi, tema resort premium, kartu vila, aksen emas, dan tata letak responsif untuk ponsel maupun desktop.
 - Memperjelas identitas situs sebagai Villa Permai yang dikelola dari Puncak, Kabupaten Bogor.
+- Menambahkan filter ketersediaan, pengurutan harga, daftar favorit tersimpan, dan tombol pemilihan vila dari kartu.
+- Menampilkan rincian estimasi biaya saat tanggal dan jumlah tamu diisi, serta tautan WhatsApp dan email pemilik.
 
 ## Menjalankan project
 
@@ -54,25 +59,37 @@ cd Adeevanvansyah_24011130331_UTS_VillaPermai
     ├── vila-khayangan.webp
     ├── villa-lembah-koi.jpg
     ├── villa-so-long-banyuwangi.webp
+    ├── villa-permai-desktop-preview.png
+    ├── villa-permai-mobile-preview.png
     ├── villa-permai-desktop-full.png
     └── villa-permai-mobile-full.png
 ```
 
 ## Tampilan
 
-Gambar berikut menunjukkan halaman secara penuh, dari bagian atas sampai footer.
+Pratinjau berikut menampilkan desain terbaru pada layar desktop dan ponsel.
+
+### Pratinjau Desktop
+
+![Pratinjau tampilan terbaru Villa Permai pada desktop](assets/villa-permai-desktop-preview.png)
+
+### Pratinjau Mobile
+
+![Pratinjau tampilan terbaru Villa Permai pada ponsel](assets/villa-permai-mobile-preview.png)
+
+Tangkapan layar halaman penuh, dari bagian atas sampai footer:
 
 ### Desktop
 
-![Halaman Villa Permai pada desktop](assets/villa-permai-desktop-full.png)
+![Halaman penuh Villa Permai pada desktop](assets/villa-permai-desktop-full.png)
 
 ### Mobile
 
-![Halaman Villa Permai pada mobile](assets/villa-permai-mobile-full.png)
+![Halaman penuh Villa Permai pada ponsel](assets/villa-permai-mobile-full.png)
 
 ## Catatan penggunaan
 
-Ini adalah demo front-end, bukan sistem reservasi yang terhubung ke pemilik vila. Data vila dan status ketersediaannya ditentukan di `script.js`. Nama terakhir dan riwayat simulasi disimpan menggunakan `localStorage`, jadi hanya tersedia pada browser dan perangkat tempat pesanan dibuat. Menghapus data browser juga akan menghapus riwayat tersebut.
+Ini adalah demo front-end, bukan sistem reservasi yang terhubung ke pemilik vila. Form hanya menyimpan simulasi permintaan dan tidak memproses pembayaran atau mengonfirmasi reservasi. Data vila dan status ketersediaannya ditentukan di `script.js`. Nama terakhir, riwayat simulasi, dan daftar favorit disimpan menggunakan `localStorage`, jadi hanya tersedia pada browser dan perangkat yang digunakan. Menghapus data browser juga akan menghapus data tersebut.
 
 ## Riwayat commit
 
@@ -91,4 +108,4 @@ Beberapa commit yang menandai perkembangan project:
 
 ## Teknologi
 
-HTML, CSS, dan JavaScript. Data nama tamu terakhir serta riwayat pesanan disimpan di `localStorage` browser.
+HTML, CSS, dan JavaScript. Data nama tamu terakhir, riwayat simulasi, dan daftar favorit disimpan di `localStorage` browser.
