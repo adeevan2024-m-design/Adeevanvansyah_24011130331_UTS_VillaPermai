@@ -2,6 +2,10 @@
 
 Aplikasi web statis untuk pemesanan vila Villa Permai di kawasan Puncak, Kabupaten Bogor. Project ini dibuat untuk membantu calon tamu melihat daftar vila, mengecek ketersediaan, menghitung perkiraan biaya, dan mengirim pesanan tanpa harus berkomunikasi lewat WhatsApp secara manual.
 
+## Repository GitHub
+
+- GitHub: https://github.com/adeevan2024-m-design/Adeevanvansyah_24011130331_UTS_VillaPermai
+
 ## Deskripsi Proyek
 
 Project ini menampilkan tiga unit vila dengan informasi seperti nama, tipe, lokasi, harga, fasilitas, dan status ketersediaan. Semua data disimpan dalam array objek di file `script.js` dan ditampilkan secara dinamis ke halaman menggunakan JavaScript.
@@ -27,6 +31,23 @@ uts-vila-permai/
 - Penyimpanan data terakhir dan riwayat pesanan ke `localStorage`
 - Tampilan responsif untuk desktop, tablet, dan ponsel
 
+## Tampilan Aplikasi
+
+### Tampilan di Web/Desktop
+
+- Header hero dengan judul besar dan tagline Villa Permai
+- Navigasi cepat ke bagian daftar vila, form pemesanan, dan riwayat pesanan
+- Kartu vila ditampilkan dalam layout yang rapi dan dua kolom pada layar lebar
+- Form pemesanan berada di bagian terpisah dengan kolom input yang jelas
+- Hasil perhitungan biaya tampil langsung setelah tombol "Cek Ketersediaan" diklik
+
+### Tampilan di Mobile
+
+- Layout beradaptasi menjadi satu kolom agar mudah dibaca di layar kecil
+- Kartu vila tersusun vertikal agar tidak terlalu padat
+- Input form dan tombol memanjang mengikuti lebar layar perangkat
+- Pencarian dan riwayat pesanan tetap dapat diakses dengan nyaman di layar mobile
+
 ## Cara Menjalankan
 
 1. Pastikan Anda sudah berada di folder project.
@@ -38,6 +59,16 @@ Contoh browser langsung:
 ```text
 file:///C:/path/ke/folder/project/index.html
 ```
+
+## Cara Pakai Aplikasi
+
+1. Buka halaman utama `index.html`.
+2. Cari vila yang ingin dipesan menggunakan kolom pencarian.
+3. Pilih vila pada form pemesanan.
+4. Isi data tamu seperti nama, tanggal check-in, tanggal check-out, dan jumlah tamu.
+5. Klik tombol `Cek Ketersediaan` untuk melihat estimasi biaya.
+6. Klik tombol `Pesan Sekarang` untuk menyimpan pesanan dan menampilkan riwayat pemesanan.
+7. Riwayat pesanan akan tersimpan di browser melalui `localStorage` dan tetap muncul saat halaman dibuka kembali.
 
 ## Validasi Form
 
@@ -60,6 +91,21 @@ total = harga per malam × jumlah malam
 
 Jika jumlah tamu lebih dari 2 orang, maka biaya tambahan Rp100.000 per malam akan dikenakan untuk setiap tamu tambahan.
 
+## Riwayat Commit
+
+Riwayat commit project saat ini adalah sebagai berikut:
+
+```bash
+git log --oneline
+```
+
+Output yang tersimpan di repository:
+
+```text
+5433539 docs: refresh README and add gitignore
+0e107be Initial commit
+```
+
 ## Riwayat Pengembangan
 
 Project ini dibuat secara bertahap dalam beberapa tahap:
@@ -68,6 +114,7 @@ Project ini dibuat secara bertahap dalam beberapa tahap:
 2. Styling dasar dan responsif layout
 3. Render data vila dan form pemesanan dengan JavaScript
 4. Penambahan validasi, localStorage, dan hitung total biaya
+5. Perbaruan dokumentasi README dan penambahan `.gitignore`
 
 ## Informasi Pemilik
 
