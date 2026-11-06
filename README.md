@@ -19,7 +19,8 @@ uts-vila-permai/
 ├── script.js
 ├── README.md
 ├── .gitignore
-└── assets/ (opsional, jika ditambahkan nanti)
+└── assets/
+    └── villa-permai-mobile.png
 ```
 
 ## Fitur
@@ -43,10 +44,13 @@ uts-vila-permai/
 
 ### Tampilan di Mobile
 
+Berikut hasil tampilan pada viewport ponsel berukuran 390 × 844 piksel. Kartu vila tersusun vertikal dan navigasi menyesuaikan lebar layar.
+
+![Tampilan Villa Permai pada layar mobile](assets/villa-permai-mobile.png)
+
 - Layout beradaptasi menjadi satu kolom agar mudah dibaca di layar kecil
-- Kartu vila tersusun vertikal agar tidak terlalu padat
-- Input form dan tombol memanjang mengikuti lebar layar perangkat
-- Pencarian dan riwayat pesanan tetap dapat diakses dengan nyaman di layar mobile
+- Input form dan tombol menyesuaikan lebar layar perangkat
+- Pencarian, pemesanan, dan riwayat pesanan tetap dapat diakses dengan nyaman
 
 ## Cara Menjalankan
 
@@ -93,18 +97,17 @@ Jika jumlah tamu lebih dari 2 orang, maka biaya tambahan Rp100.000 per malam aka
 
 ## Riwayat Commit
 
-Riwayat commit project saat ini adalah sebagai berikut:
+Riwayat lengkap beserta hash commit dapat dilihat di [halaman commits GitHub](https://github.com/adeevan2024-m-design/Adeevanvansyah_24011130331_UTS_VillaPermai/commits/main/). Untuk melihatnya dari terminal:
 
 ```bash
 git log --oneline
 ```
 
-Output yang tersimpan di repository:
+Beberapa tahap pengembangan utama:
 
-```text
-5433539 docs: refresh README and add gitignore
-0e107be Initial commit
-```
+- `Initial commit` — menambahkan file awal aplikasi
+- `docs: refresh README and add gitignore` — memperbarui dokumentasi project
+- `docs: add app preview and usage guide` — menambahkan panduan penggunaan dan preview
 
 ## Riwayat Pengembangan
 
