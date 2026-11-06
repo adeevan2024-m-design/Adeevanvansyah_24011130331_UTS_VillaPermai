@@ -1,0 +1,466 @@
+:root {
+  --hijau-hutan: #223527;
+  --hijau-daun: #4f7358;
+  --pasir: #efe8d8;
+  --putih-hangat: #fbf9f3;
+  --emas-redup: #a97d3a;
+  --merah-bata: #a84a3f;
+  --teks-gelap: #262f20;
+  --teks-lembut: #5c6350;
+  --garis: #d9cfb8;
+  --radius-kartu: 4px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", "Segoe UI", sans-serif;
+  color: var(--teks-gelap);
+  background-color: var(--pasir);
+  line-height: 1.55;
+}
+
+h1, h2, h3 {
+  font-family: "Fraunces", Georgia, serif;
+  margin: 0;
+  color: var(--hijau-hutan);
+}
+
+p {
+  margin: 0 0 0.6em 0;
+  color: var(--teks-lembut);
+  max-width: 62ch;
+}
+
+a {
+  color: var(--hijau-hutan);
+}
+
+.header {
+  position: relative;
+  background-color: var(--hijau-hutan);
+  padding: 3.5rem 2rem 4.5rem 2rem;
+  overflow: hidden;
+}
+
+.header__hills {
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 70px;
+  background:
+    radial-gradient(circle at 15% 100%, var(--hijau-daun) 0 38%, transparent 39%),
+    radial-gradient(circle at 45% 100%, #395f41 0 48%, transparent 49%),
+    radial-gradient(circle at 75% 100%, var(--hijau-daun) 0 42%, transparent 43%),
+    radial-gradient(circle at 100% 100%, #395f41 0 36%, transparent 37%);
+  opacity: 0.9;
+}
+
+.header__isi {
+  position: relative;
+  max-width: 640px;
+}
+
+.header__label {
+  color: var(--emas-redup);
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.3em;
+}
+
+.header__judul {
+  font-size: clamp(2.2rem, 5vw, 3.1rem);
+  font-weight: 600;
+  color: var(--putih-hangat);
+}
+
+.header__tagline {
+  color: #d7ddc9;
+  margin-top: 0.8em;
+  font-size: 1.05rem;
+}
+
+.nav {
+  display: flex;
+  gap: 1.8rem;
+  padding: 0.9rem 2rem;
+  background-color: var(--putih-hangat);
+  border-bottom: 1px solid var(--garis);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  padding: 0.3rem 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.nav a:hover {
+  border-bottom-color: var(--emas-redup);
+}
+
+main {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section {
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--garis);
+}
+
+.section--alt {
+  background-color: var(--putih-hangat);
+  margin: 0 -2rem;
+  padding: 3rem 2rem;
+  border-bottom: none;
+}
+
+.section__judul {
+  font-size: 1.7rem;
+}
+
+.section__deskripsi {
+  margin-top: 0.5em;
+}
+
+.search-box {
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  max-width: 420px;
+  gap: 0.4rem;
+}
+
+.search-box label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--teks-gelap);
+}
+
+.search-box input {
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--garis);
+  border-radius: var(--radius-kartu);
+  font-family: inherit;
+  font-size: 0.95rem;
+  background-color: var(--putih-hangat);
+}
+
+.search-box input:focus {
+  outline: 2px solid var(--hijau-daun);
+  outline-offset: 1px;
+}
+
+.villa-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: 1.3rem;
+  margin-top: 1rem;
+}
+
+.villa-card {
+  background-color: var(--putih-hangat);
+  border: 1px solid var(--garis);
+  border-top: 3px solid var(--hijau-daun);
+  border-radius: var(--radius-kartu);
+  padding: 1.4rem;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.villa-card:hover {
+  transform: translateY(-3px);
+  border-top-color: var(--emas-redup);
+}
+
+.villa-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.2em;
+}
+
+.villa-card__tipe {
+  color: var(--teks-gelap);
+  font-weight: 500;
+  margin-bottom: 0.1em;
+}
+
+.villa-card__lokasi {
+  font-size: 0.9rem;
+}
+
+.villa-card__price {
+  font-family: "Fraunces", serif;
+  font-size: 1.15rem;
+  color: var(--hijau-hutan);
+  margin: 0.6em 0 0.3em 0;
+}
+
+.villa-card__fasilitas-judul {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--teks-gelap);
+  margin-bottom: 0.2em;
+}
+
+.villa-card__fasilitas {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 0.9em 0;
+  font-size: 0.88rem;
+}
+
+.villa-card__fasilitas li {
+  padding: 0.15rem 0;
+  border-bottom: 1px dashed var(--garis);
+}
+
+.status {
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 500;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+}
+
+.status--tersedia {
+  background-color: #e4ede1;
+  color: var(--hijau-daun);
+}
+
+.status--penuh {
+  background-color: #f3e2df;
+  color: var(--merah-bata);
+}
+
+.pesan-kosong {
+  grid-column: 1 / -1;
+  padding: 1.5rem;
+  text-align: center;
+  border: 1px dashed var(--garis);
+  border-radius: var(--radius-kartu);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.1rem;
+  margin-top: 1.4rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-field label {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.form-field input,
+.form-field select {
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--garis);
+  border-radius: var(--radius-kartu);
+  font-family: inherit;
+  font-size: 0.95rem;
+  background-color: var(--putih-hangat);
+}
+
+.form-field input:focus,
+.form-field select:focus {
+  outline: 2px solid var(--hijau-daun);
+  outline-offset: 1px;
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.9rem;
+  margin-top: 1.6rem;
+}
+
+.tombol {
+  padding: 0.75rem 1.4rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  font-family: inherit;
+  border-radius: var(--radius-kartu);
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.tombol--garis {
+  background-color: transparent;
+  border: 1px solid var(--hijau-hutan);
+  color: var(--hijau-hutan);
+}
+
+.tombol--garis:hover {
+  background-color: var(--hijau-hutan);
+  color: var(--putih-hangat);
+}
+
+.tombol--isi {
+  background-color: var(--hijau-hutan);
+  border: 1px solid var(--hijau-hutan);
+  color: var(--putih-hangat);
+}
+
+.tombol--isi:hover {
+  background-color: var(--emas-redup);
+  border-color: var(--emas-redup);
+}
+
+.hasil-box {
+  margin-top: 1.4rem;
+  padding: 0;
+  border-radius: var(--radius-kartu);
+  max-width: 560px;
+}
+
+.hasil-box:empty {
+  display: none;
+}
+
+.hasil-box p,
+.hasil-box h3 {
+  margin: 0 0 0.3em 0;
+}
+
+.hasil-box--sukses,
+.hasil-box--gagal {
+  padding: 1.1rem 1.3rem;
+  animation: munculHasil 0.3s ease;
+}
+
+.hasil-box--sukses {
+  background-color: #e4ede1;
+  border: 1px solid var(--hijau-daun);
+}
+
+.hasil-box--sukses h3,
+.hasil-box--sukses p {
+  color: #2d4a32;
+}
+
+.hasil-box--gagal {
+  background-color: #f3e2df;
+  border: 1px solid var(--merah-bata);
+}
+
+.hasil-box--gagal p {
+  color: var(--merah-bata);
+}
+
+@keyframes munculHasil {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.riwayat-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  margin-top: 1rem;
+}
+
+.riwayat-item {
+  padding: 0.8rem 1.1rem;
+  background-color: var(--putih-hangat);
+  border: 1px solid var(--garis);
+  border-left: 3px solid var(--emas-redup);
+  border-radius: var(--radius-kartu);
+  font-size: 0.92rem;
+}
+
+.footer {
+  background-color: var(--hijau-hutan);
+  padding: 2.5rem 2rem;
+  margin-top: 2rem;
+}
+
+.footer__isi {
+  max-width: 1040px;
+  margin: 0 auto;
+}
+
+.footer h3 {
+  color: var(--putih-hangat);
+  font-size: 1.2rem;
+}
+
+.footer p {
+  color: #c9cfbd;
+  font-size: 0.92rem;
+  margin: 0.25em 0;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    gap: 1.1rem;
+    padding: 0.8rem 1.2rem;
+    overflow-x: auto;
+  }
+
+  main {
+    padding: 0 1.2rem;
+  }
+
+  .header {
+    padding: 2.6rem 1.2rem 3.5rem 1.2rem;
+  }
+
+  .section--alt {
+    margin: 0 -1.2rem;
+    padding: 2.6rem 1.2rem;
+  }
+
+  .villa-list {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__judul {
+    font-size: 2rem;
+  }
+
+  .section__judul {
+    font-size: 1.4rem;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .tombol {
+    width: 100%;
+  }
+
+  .nav {
+    gap: 0.9rem;
+  }
+}
