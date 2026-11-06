@@ -1,131 +1,81 @@
-# Villa Permai — Aplikasi Pemesanan Vila Berbasis Web
+# UTS Teknologi Web - Aplikasi Pemesanan Vila Permai
 
-Aplikasi web statis untuk pemesanan vila Villa Permai di kawasan Puncak, Kabupaten Bogor. Project ini dibuat untuk membantu calon tamu melihat daftar vila, mengecek ketersediaan, menghitung perkiraan biaya, dan mengirim pesanan tanpa harus berkomunikasi lewat WhatsApp secara manual.
+## Identitas Mahasiswa
 
-## Repository GitHub
+- **Nama:** Ade Evan Alvianysah
+- **NIM:** 24011130331
+- **Nama Repository:** `Adeevanvansyah_24011130331_UTS_VillaPermai`
+- **GitHub:** [adeevan2024-m-design/Adeevanvansyah_24011130331_UTS_VillaPermai](https://github.com/adeevan2024-m-design/Adeevanvansyah_24011130331_UTS_VillaPermai)
 
-- GitHub: https://github.com/adeevan2024-m-design/Adeevanvansyah_24011130331_UTS_VillaPermai
+## Deskripsi Aplikasi
 
-## Deskripsi Proyek
-
-Project ini menampilkan tiga unit vila dengan informasi seperti nama, tipe, lokasi, harga, fasilitas, dan status ketersediaan. Semua data disimpan dalam array objek di file `script.js` dan ditampilkan secara dinamis ke halaman menggunakan JavaScript.
-
-## Struktur Folder
-
-```text
-uts-vila-permai/
-├── index.html
-├── style.css
-├── script.js
-├── README.md
-├── .gitignore
-└── assets/
-    └── villa-permai-mobile.png
-```
-
-## Fitur
-
-- Menampilkan daftar 3 vila dengan status tersedia / penuh
-- Pencarian vila berdasarkan nama, lokasi, atau fasilitas
-- Form pemesanan dengan validasi input
-- Hitung total biaya otomatis berdasarkan lama menginap dan jumlah tamu
-- Penyimpanan data terakhir dan riwayat pesanan ke `localStorage`
-- Tampilan responsif untuk desktop, tablet, dan ponsel
-
-## Tampilan Aplikasi
-
-### Tampilan di Web/Desktop
-
-- Header hero dengan judul besar dan tagline Villa Permai
-- Navigasi cepat ke bagian daftar vila, form pemesanan, dan riwayat pesanan
-- Kartu vila ditampilkan dalam layout yang rapi dan dua kolom pada layar lebar
-- Form pemesanan berada di bagian terpisah dengan kolom input yang jelas
-- Hasil perhitungan biaya tampil langsung setelah tombol "Cek Ketersediaan" diklik
-
-### Tampilan di Mobile
-
-Berikut hasil tampilan pada viewport ponsel berukuran 390 × 844 piksel. Kartu vila tersusun vertikal dan navigasi menyesuaikan lebar layar.
-
-![Tampilan Villa Permai pada layar mobile](assets/villa-permai-mobile.png)
-
-- Layout beradaptasi menjadi satu kolom agar mudah dibaca di layar kecil
-- Input form dan tombol menyesuaikan lebar layar perangkat
-- Pencarian, pemesanan, dan riwayat pesanan tetap dapat diakses dengan nyaman
+Villa Permai adalah aplikasi web statis untuk melihat informasi vila di kawasan Puncak, Bogor, dan mengisi simulasi pemesanan. Aplikasi dibuat menggunakan HTML, CSS, dan JavaScript tanpa server atau database. Data vila disimpan di dalam JavaScript, sedangkan nama tamu terakhir dan riwayat pesanan disimpan di `localStorage` browser.
 
 ## Cara Menjalankan
 
-1. Pastikan Anda sudah berada di folder project.
-2. Buka file `index.html` di browser.
-3. Atau jalankan Live Server di VS Code agar file CSS dan JavaScript terbaca dengan benar.
+### Menggunakan Git
 
-Contoh browser langsung:
-
-```text
-file:///C:/path/ke/folder/project/index.html
+```bash
+git clone https://github.com/adeevan2024-m-design/Adeevanvansyah_24011130331_UTS_VillaPermai.git
+cd Adeevanvansyah_24011130331_UTS_VillaPermai
 ```
 
-## Cara Pakai Aplikasi
+Buka `index.html` di browser, atau buka folder project di VS Code dan pilih **Open with Live Server**.
 
-1. Buka halaman utama `index.html`.
-2. Cari vila yang ingin dipesan menggunakan kolom pencarian.
-3. Pilih vila pada form pemesanan.
-4. Isi data tamu seperti nama, tanggal check-in, tanggal check-out, dan jumlah tamu.
-5. Klik tombol `Cek Ketersediaan` untuk melihat estimasi biaya.
-6. Klik tombol `Pesan Sekarang` untuk menyimpan pesanan dan menampilkan riwayat pemesanan.
-7. Riwayat pesanan akan tersimpan di browser melalui `localStorage` dan tetap muncul saat halaman dibuka kembali.
+### Tanpa Git
 
-## Validasi Form
+Unduh project melalui tombol **Code > Download ZIP** di repository GitHub, ekstrak file ZIP, lalu buka `index.html` di browser.
 
-Form ini sudah dilengkapi dengan validasi berikut:
+## Status Fitur
 
-- Nama tamu wajib diisi
-- Vila harus dipilih
-- Tanggal check-in dan check-out wajib diisi
-- Tanggal check-out harus lebih besar dari check-in
-- Tanggal check-in tidak boleh di masa lalu
-- Jumlah tamu harus 1–10 orang
+- [x] Menampilkan tiga vila beserta tipe, lokasi, fasilitas, harga, dan status
+- [x] Mencari vila berdasarkan nama, lokasi, atau fasilitas
+- [x] Menghitung perkiraan biaya berdasarkan jumlah malam
+- [x] Menambahkan biaya Rp100.000 per tamu per malam untuk tamu di atas dua orang
+- [x] Memvalidasi nama, vila, tanggal, dan jumlah tamu (1–10 orang)
+- [x] Menyimpan nama tamu terakhir dan riwayat pesanan di `localStorage`
+- [x] Menyesuaikan tampilan untuk desktop dan layar mobile
 
-## Logika Harga
+> **Catatan:** Ini merupakan simulasi front-end. Data pemesanan hanya tersimpan di browser yang digunakan dan tidak dikirim ke server atau pemilik vila. Status ketersediaan merupakan data contoh di dalam aplikasi.
 
-Perhitungan total biaya menggunakan rumus berikut:
+## Tangkapan Layar
 
-```text
-total = harga per malam × jumlah malam
-```
+### Tampilan Desktop — Daftar Vila
 
-Jika jumlah tamu lebih dari 2 orang, maka biaya tambahan Rp100.000 per malam akan dikenakan untuk setiap tamu tambahan.
+![Tampilan desktop Villa Permai](assets/villa-permai-desktop.png)
+
+### Tampilan Mobile
+
+![Tampilan mobile Villa Permai](assets/villa-permai-mobile.png)
+
+## Cara Menggunakan Aplikasi
+
+1. Buka aplikasi melalui `index.html`.
+2. Cari vila menggunakan kolom **Cari vila**.
+3. Pada **Form Pemesanan**, pilih vila dan masukkan nama, tanggal check-in, tanggal check-out, serta jumlah tamu.
+4. Pilih **Cek Ketersediaan** untuk melihat ringkasan estimasi biaya.
+5. Pilih **Pesan Sekarang** untuk menyimpan simulasi pesanan dan melihatnya di bagian **Riwayat Pesanan Tersimpan**.
+
+Riwayat dapat dilihat kembali selama data browser tidak dihapus dan aplikasi dibuka di browser/perangkat yang sama.
 
 ## Riwayat Commit
 
-Riwayat lengkap beserta hash commit dapat dilihat di [halaman commits GitHub](https://github.com/adeevan2024-m-design/Adeevanvansyah_24011130331_UTS_VillaPermai/commits/main/). Untuk melihatnya dari terminal:
+Riwayat lengkap tersedia di [GitHub Commits](https://github.com/adeevan2024-m-design/Adeevanvansyah_24011130331_UTS_VillaPermai/commits/main/). Untuk melihat riwayat dari terminal:
 
 ```bash
 git log --oneline
 ```
 
-Beberapa tahap pengembangan utama:
+Commit pengembangan utama:
 
 - `Initial commit` — menambahkan file awal aplikasi
-- `docs: refresh README and add gitignore` — memperbarui dokumentasi project
-- `docs: add app preview and usage guide` — menambahkan panduan penggunaan dan preview
+- `docs: refresh README and add gitignore` — memperbarui dokumentasi awal
+- `docs: add app preview and usage guide` — menambahkan panduan dan preview aplikasi
+- `docs: add mobile screenshot to README` — menambahkan screenshot mobile
 
-## Riwayat Pengembangan
+## Teknologi
 
-Project ini dibuat secara bertahap dalam beberapa tahap:
-
-1. Pembuatan struktur halaman utama
-2. Styling dasar dan responsif layout
-3. Render data vila dan form pemesanan dengan JavaScript
-4. Penambahan validasi, localStorage, dan hitung total biaya
-5. Perbaruan dokumentasi README dan penambahan `.gitignore`
-
-## Informasi Pemilik
-
-- Nama usaha: Villa Permai
-- Lokasi: Puncak, Kabupaten Bogor
-- Kontak pemilik: Pak Hendra
-- WhatsApp: 0812-9045-2217
-
-## Status Project
-
-Project ini siap digunakan sebagai tugas UTS dan sudah berfungsi sebagai aplikasi pemesanan vila berbasis web statis.
+- HTML5
+- CSS3
+- JavaScript
+- `localStorage`
