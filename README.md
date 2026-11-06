@@ -1,6 +1,6 @@
 # Aplikasi Pemesanan Vila Permai
 
-Project UTS Teknologi Web berupa website sederhana untuk melihat pilihan vila di kawasan Puncak, Bogor. Pengunjung dapat mencari vila, mengisi form, lalu melihat perkiraan harga dan menyimpan simulasi pesanannya di browser.
+Project UTS Teknologi Web berupa website katalog dan simulasi pemesanan vila. Villa Permai dikelola dari kawasan Puncak, Bogor. Pengunjung dapat melihat pilihan vila di beberapa lokasi, mencari berdasarkan nama atau fasilitas, mengisi form, lalu melihat perkiraan harga dan menyimpan simulasi pesanannya di browser.
 
 ## Identitas
 
@@ -10,16 +10,23 @@ Project UTS Teknologi Web berupa website sederhana untuk melihat pilihan vila di
 
 ## Sekilas tentang aplikasi
 
-Halaman menampilkan tiga pilihan vila lengkap dengan lokasi, jumlah kamar, fasilitas, harga per malam, dan status. Kolom pencarian bisa digunakan untuk mencari nama, lokasi, maupun fasilitas. Pemesanan dilakukan melalui form di halaman yang sama.
+Halaman menampilkan Vila Khayangan, Villa Lembah Koi, dan Villa So Long Banyuwangi lengkap dengan foto, lokasi, jumlah kamar, fasilitas, harga per malam, dan status. Villa So Long Banyuwangi tetap ditampilkan dengan nama dan lokasi vilanya; identitas pemilik dan layanan Villa Permai berada di Puncak, Bogor. Kolom pencarian bisa digunakan untuk mencari nama, lokasi, maupun fasilitas. Pemesanan dilakukan melalui form di halaman yang sama.
 
 Harga dihitung dari jumlah malam. Untuk setiap tamu di atas dua orang, ada tambahan Rp100.000 per malam. Sebelum pesanan disimpan, aplikasi memeriksa isian form, tanggal, jumlah tamu, dan status vila.
 
 ### Yang bisa dicoba
 
-- Cari kata seperti `Cisarua`, `Anggrek`, atau `WiFi`.
-- Coba pilih Vila Melati untuk melihat pesan bahwa vila sedang penuh.
+- Cari kata seperti `Khayangan`, `Banyuwangi`, atau `WiFi`.
+- Coba pilih Villa So Long Banyuwangi untuk melihat pesan bahwa vila sedang penuh.
 - Isi form dengan tanggal check-in dan check-out, lalu pilih **Cek Ketersediaan** untuk melihat rincian biaya.
 - Pilih **Pesan Sekarang** untuk menambahkan simulasi pesanan ke riwayat.
+
+## Pembaruan tampilan dan konten
+
+- Memperbarui daftar vila menjadi Vila Khayangan, Villa Lembah Koi, dan Villa So Long Banyuwangi.
+- Menambahkan foto setiap vila ke folder `assets/` dan menampilkannya pada kartu vila.
+- Memperbarui tampilan dengan header bergambar, kartu foto, tata letak form yang lebih rapi, dan desain responsif untuk ponsel maupun desktop.
+- Memperjelas identitas situs sebagai Villa Permai yang dikelola dari Puncak, Kabupaten Bogor.
 
 ## Menjalankan project
 
@@ -44,6 +51,9 @@ cd Adeevanvansyah_24011130331_UTS_VillaPermai
 ├── script.js                     # Data vila dan proses pemesanan
 ├── README.md                     # Dokumentasi project
 └── assets/
+    ├── vila-khayangan.webp
+    ├── villa-lembah-koi.jpg
+    ├── villa-so-long-banyuwangi.webp
     ├── villa-permai-desktop-full.png
     └── villa-permai-mobile-full.png
 ```

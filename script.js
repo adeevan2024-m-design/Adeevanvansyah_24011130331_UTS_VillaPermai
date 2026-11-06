@@ -1,29 +1,32 @@
 const daftarVila = [
   {
-    id: "vila-kenangan",
-    nama: "Vila Kenangan",
+    id: "vila-khayangan",
+    nama: "Vila Khayangan",
     tipe: "3 Kamar Tidur",
-    lokasi: "Cisarua, Puncak",
+    lokasi: "Bogor, Jawa Barat",
     harga: 1500000,
     fasilitas: ["Kolam renang pribadi", "WiFi", "Dapur lengkap", "Parkir luas"],
+    gambar: "assets/vila-khayangan.webp",
     tersedia: true
   },
   {
-    id: "vila-anggrek",
-    nama: "Vila Anggrek",
+    id: "villa-lembah-koi",
+    nama: "Villa Lembah Koi",
     tipe: "2 Kamar Tidur",
-    lokasi: "Cipanas, Puncak",
+    lokasi: "Jawa Barat",
     harga: 1100000,
     fasilitas: ["WiFi", "Teras dengan pemandangan gunung", "Pemanas air"],
+    gambar: "assets/villa-lembah-koi.jpg",
     tersedia: true
   },
   {
-    id: "vila-melati",
-    nama: "Vila Melati",
+    id: "villa-so-long-banyuwangi",
+    nama: "Villa So Long Banyuwangi",
     tipe: "4 Kamar Tidur",
-    lokasi: "Megamendung, Puncak",
+    lokasi: "Banyuwangi, Jawa Timur",
     harga: 2200000,
     fasilitas: ["Kolam renang", "Ruang karaoke", "Dapur lengkap", "WiFi", "Parkir 4 mobil"],
+    gambar: "assets/villa-so-long-banyuwangi.webp",
     tersedia: false
   }
 ];
@@ -53,6 +56,13 @@ function renderDaftarVila(data) {
   data.forEach(function (vila) {
     const kartu = document.createElement("article");
     kartu.className = "villa-card";
+
+    const gambar = document.createElement("img");
+    gambar.className = "villa-card__gambar";
+    gambar.src = vila.gambar;
+    gambar.alt = vila.nama;
+    gambar.loading = "lazy";
+    kartu.appendChild(gambar);
 
     const judul = document.createElement("h3");
     judul.textContent = vila.nama;
