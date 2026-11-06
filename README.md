@@ -1,52 +1,81 @@
 # Villa Permai — Aplikasi Pemesanan Vila Berbasis Web
 
-Halaman web statis untuk Villa Permai, usaha penyewaan tiga unit vila di kawasan Puncak, Kabupaten Bogor. Dibuat agar calon tamu bisa mengecek ketersediaan, melihat perkiraan biaya, dan mengirim pesanan sendiri tanpa harus tanya jawab manual lewat WhatsApp.
+Aplikasi web statis untuk pemesanan vila Villa Permai di kawasan Puncak, Kabupaten Bogor. Project ini dibuat untuk membantu calon tamu melihat daftar vila, mengecek ketersediaan, menghitung perkiraan biaya, dan mengirim pesanan tanpa harus berkomunikasi lewat WhatsApp secara manual.
 
-## Struktur Proyek
+## Deskripsi Proyek
 
+Project ini menampilkan tiga unit vila dengan informasi seperti nama, tipe, lokasi, harga, fasilitas, dan status ketersediaan. Semua data disimpan dalam array objek di file `script.js` dan ditampilkan secara dinamis ke halaman menggunakan JavaScript.
+
+## Struktur Folder
+
+```text
 uts-vila-permai/
 ├── index.html
 ├── style.css
 ├── script.js
 ├── README.md
-└── .gitignore
+├── .gitignore
+└── assets/ (opsional, jika ditambahkan nanti)
+```
 
+## Fitur
 
-Tidak ada back-end maupun basis data. Seluruh data tiga vila (nama, tipe kamar, lokasi, harga, fasilitas, status ketersediaan) disimpan sebagai array objek di dalam `script.js` dan dirender ke halaman memakai `createElement` dan `appendChild`.
+- Menampilkan daftar 3 vila dengan status tersedia / penuh
+- Pencarian vila berdasarkan nama, lokasi, atau fasilitas
+- Form pemesanan dengan validasi input
+- Hitung total biaya otomatis berdasarkan lama menginap dan jumlah tamu
+- Penyimpanan data terakhir dan riwayat pesanan ke `localStorage`
+- Tampilan responsif untuk desktop, tablet, dan ponsel
 
 ## Cara Menjalankan
 
-Buka file `index.html` langsung di browser, atau jalankan lewat live server (misalnya ekstensi Live Server di VS Code) agar path relatif ke `style.css` dan `script.js` terbaca dengan baik.
+1. Pastikan Anda sudah berada di folder project.
+2. Buka file `index.html` di browser.
+3. Atau jalankan Live Server di VS Code agar file CSS dan JavaScript terbaca dengan benar.
 
-## Fitur Utama
+Contoh browser langsung:
 
-- Daftar tiga vila ditampilkan sebagai kartu, lengkap dengan status tersedia/penuh.
-- Pencarian/filter vila berdasarkan nama, lokasi, atau fasilitas.
-- Form pemesanan dengan dua tombol: **Cek Ketersediaan** (menampilkan ringkasan biaya tanpa mengirim pesanan) dan **Pesan Sekarang** (mengirim sekaligus menyimpan pesanan).
-- Validasi input berbahasa Indonesia: nama wajib diisi, vila wajib dipilih, tanggal check-out harus setelah check-in, tanggal tidak boleh di masa lalu, dan jumlah tamu dibatasi 1–10 orang.
-- Nama tamu terakhir dan riwayat pesanan disimpan di `localStorage`, sehingga tetap muncul saat halaman dibuka ulang di perangkat yang sama.
-- Tampilan responsif dengan dua breakpoint (768px dan 480px): tata letak kartu dan form berubah dari dua kolom menjadi satu kolom di layar sempit.
-
-## Logika Perhitungan Harga
-
-Total biaya dihitung dengan fungsi `hitungTotalHarga()`:
-
+```text
+file:///C:/path/ke/folder/project/index.html
 ```
+
+## Validasi Form
+
+Form ini sudah dilengkapi dengan validasi berikut:
+
+- Nama tamu wajib diisi
+- Vila harus dipilih
+- Tanggal check-in dan check-out wajib diisi
+- Tanggal check-out harus lebih besar dari check-in
+- Tanggal check-in tidak boleh di masa lalu
+- Jumlah tamu harus 1–10 orang
+
+## Logika Harga
+
+Perhitungan total biaya menggunakan rumus berikut:
+
+```text
 total = harga per malam × jumlah malam
 ```
 
-Jika jumlah tamu lebih dari 2 orang, setiap tamu tambahan dikenakan biaya ekstra Rp100.000 per malam. Logika ini dipilih karena vila Villa Permai disewakan per unit (bukan per kepala), tetapi tamu yang lebih banyak dari kapasitas normal tetap menambah biaya operasional (air, listrik, perlengkapan tambahan).
+Jika jumlah tamu lebih dari 2 orang, maka biaya tambahan Rp100.000 per malam akan dikenakan untuk setiap tamu tambahan.
 
-## Riwayat Commit
+## Riwayat Pengembangan
 
-Riwayat commit disusun bertahap mengikuti tahapan pengerjaan berikut:
+Project ini dibuat secara bertahap dalam beberapa tahap:
 
-1. `init: struktur HTML dasar halaman Villa Permai`
-2. `style: tambah styling dasar dan tata letak responsif`
-3. `feat: render data vila dan form pemesanan dengan JavaScript`
-4. `feat: tambah validasi form, localStorage, dan perhitungan total biaya`
+1. Pembuatan struktur halaman utama
+2. Styling dasar dan responsif layout
+3. Render data vila dan form pemesanan dengan JavaScript
+4. Penambahan validasi, localStorage, dan hitung total biaya
 
-## Kontak Pemilik
+## Informasi Pemilik
 
-Villa Permai — Kawasan Puncak, Kabupaten Bogor
-Pak Hendra — WhatsApp 0812-9045-2217
+- Nama usaha: Villa Permai
+- Lokasi: Puncak, Kabupaten Bogor
+- Kontak pemilik: Pak Hendra
+- WhatsApp: 0812-9045-2217
+
+## Status Project
+
+Project ini siap digunakan sebagai tugas UTS dan sudah berfungsi sebagai aplikasi pemesanan vila berbasis web statis.
