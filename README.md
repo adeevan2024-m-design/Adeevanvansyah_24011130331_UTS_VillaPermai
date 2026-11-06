@@ -1,99 +1,84 @@
-# UTS Teknologi Web - Aplikasi Pemesanan Vila Permai
+# Aplikasi Pemesanan Vila Permai
 
-## Identitas Mahasiswa
+Project UTS Teknologi Web berupa website sederhana untuk melihat pilihan vila di kawasan Puncak, Bogor. Pengunjung dapat mencari vila, mengisi form, lalu melihat perkiraan harga dan menyimpan simulasi pesanannya di browser.
+
+## Identitas
 
 - **Nama:** Ade Evan Alvianysah
 - **NIM:** 24011130331
-- **Nama Repository:** `Adeevanvansyah_24011130331_UTS_VillaPermai`
-- **GitHub:** [adeevan2024-m-design/Adeevanvansyah_24011130331_UTS_VillaPermai](https://github.com/adeevan2024-m-design/Adeevanvansyah_24011130331_UTS_VillaPermai)
+- **Repository:** [Adeevanvansyah_24011130331_UTS_VillaPermai](https://github.com/adeevan2024-m-design/Adeevanvansyah_24011130331_UTS_VillaPermai)
 
-## Deskripsi Aplikasi
+## Sekilas tentang aplikasi
 
-Villa Permai adalah aplikasi web statis untuk melihat informasi vila di kawasan Puncak, Bogor, dan mengisi simulasi pemesanan. Aplikasi dibuat menggunakan HTML, CSS, dan JavaScript tanpa server atau database. Data vila disimpan di dalam JavaScript, sedangkan nama tamu terakhir dan riwayat pesanan disimpan di `localStorage` browser.
+Halaman menampilkan tiga pilihan vila lengkap dengan lokasi, jumlah kamar, fasilitas, harga per malam, dan status. Kolom pencarian bisa digunakan untuk mencari nama, lokasi, maupun fasilitas. Pemesanan dilakukan melalui form di halaman yang sama.
 
-## Cara Menjalankan
+Harga dihitung dari jumlah malam. Untuk setiap tamu di atas dua orang, ada tambahan Rp100.000 per malam. Sebelum pesanan disimpan, aplikasi memeriksa isian form, tanggal, jumlah tamu, dan status vila.
 
-### Menggunakan Git
+### Yang bisa dicoba
+
+- Cari kata seperti `Cisarua`, `Anggrek`, atau `WiFi`.
+- Coba pilih Vila Melati untuk melihat pesan bahwa vila sedang penuh.
+- Isi form dengan tanggal check-in dan check-out, lalu pilih **Cek Ketersediaan** untuk melihat rincian biaya.
+- Pilih **Pesan Sekarang** untuk menambahkan simulasi pesanan ke riwayat.
+
+## Menjalankan project
+
+Project tidak memerlukan instalasi package atau server backend.
+
+1. Clone repository atau unduh sebagai ZIP dari GitHub.
+2. Buka folder project di VS Code.
+3. Buka `index.html` langsung di browser. Jika menggunakan ekstensi Live Server, klik kanan `index.html`, lalu pilih **Open with Live Server**.
+
+Untuk clone melalui terminal:
 
 ```bash
 git clone https://github.com/adeevan2024-m-design/Adeevanvansyah_24011130331_UTS_VillaPermai.git
 cd Adeevanvansyah_24011130331_UTS_VillaPermai
 ```
 
-Buka `index.html` di browser, atau buka folder project di VS Code dan pilih **Open with Live Server**.
-
-### Tanpa Git
-
-Unduh project melalui tombol **Code > Download ZIP** di repository GitHub, ekstrak file ZIP, lalu buka `index.html` di browser.
-
-## Struktur Project
+## Isi repository
 
 ```text
-Adeevanvansyah_24011130331_UTS_VillaPermai/
-├── index.html
-├── style.css
-├── script.js
-├── README.md
+├── index.html                    # Struktur halaman
+├── style.css                     # Tampilan dan aturan responsif
+├── script.js                     # Data vila dan proses pemesanan
+├── README.md                     # Dokumentasi project
 └── assets/
     ├── villa-permai-desktop-full.png
     └── villa-permai-mobile-full.png
 ```
 
-## Status Fitur
+## Tampilan
 
-- [x] Menampilkan tiga vila beserta tipe, lokasi, fasilitas, harga, dan status
-- [x] Mencari vila berdasarkan nama, lokasi, atau fasilitas
-- [x] Menghitung perkiraan biaya berdasarkan jumlah malam
-- [x] Menambahkan biaya Rp100.000 per tamu per malam untuk tamu di atas dua orang
-- [x] Memvalidasi nama, vila, tanggal, dan jumlah tamu (1–10 orang)
-- [x] Menyimpan nama tamu terakhir dan riwayat pesanan di `localStorage`
-- [x] Menyesuaikan tampilan untuk desktop dan layar mobile
+Gambar berikut menunjukkan halaman secara penuh, dari bagian atas sampai footer.
 
-> **Catatan:** Ini merupakan simulasi front-end. Data pemesanan hanya tersimpan di browser yang digunakan dan tidak dikirim ke server atau pemilik vila. Status ketersediaan merupakan data contoh di dalam aplikasi.
+### Desktop
 
-## Tangkapan Layar
+![Halaman Villa Permai pada desktop](assets/villa-permai-desktop-full.png)
 
-Screenshot di bawah merupakan tangkapan satu halaman penuh, bukan potongan terpisah. Gambar mencakup halaman aplikasi dari header hingga footer.
+### Mobile
 
-### Tampilan Desktop
+![Halaman Villa Permai pada mobile](assets/villa-permai-mobile-full.png)
 
-![Tampilan penuh Villa Permai pada desktop](assets/villa-permai-desktop-full.png)
+## Catatan penggunaan
 
-### Tampilan Mobile
+Ini adalah demo front-end, bukan sistem reservasi yang terhubung ke pemilik vila. Data vila dan status ketersediaannya ditentukan di `script.js`. Nama terakhir dan riwayat simulasi disimpan menggunakan `localStorage`, jadi hanya tersedia pada browser dan perangkat tempat pesanan dibuat. Menghapus data browser juga akan menghapus riwayat tersebut.
 
-![Tampilan penuh Villa Permai pada mobile](assets/villa-permai-mobile-full.png)
+## Riwayat commit
 
-## Cara Menggunakan Aplikasi
+Riwayat lengkap dapat dilihat di [halaman commits repository](https://github.com/adeevan2024-m-design/Adeevanvansyah_24011130331_UTS_VillaPermai/commits/main/), atau dari folder project dengan perintah `git log --oneline`.
 
-1. Buka aplikasi melalui `index.html`.
-2. Cari vila menggunakan kolom **Cari vila**.
-3. Pada **Form Pemesanan**, pilih vila dan masukkan nama, tanggal check-in, tanggal check-out, serta jumlah tamu.
-4. Pilih **Cek Ketersediaan** untuk melihat ringkasan estimasi biaya.
-5. Pilih **Pesan Sekarang** untuk menyimpan simulasi pesanan dan melihatnya di bagian **Riwayat Pesanan Tersimpan**.
+Beberapa commit yang menandai perkembangan project:
 
-Riwayat dapat dilihat kembali selama data browser tidak dihapus dan aplikasi dibuka di browser/perangkat yang sama.
-
-## Riwayat Commit
-
-Riwayat lengkap dan terbaru tersedia di [GitHub Commits](https://github.com/adeevan2024-m-design/Adeevanvansyah_24011130331_UTS_VillaPermai/commits/main/). Untuk melihatnya dari terminal:
-
-```bash
-git log --oneline
-```
-
-Riwayat commit utama:
-
-```text
-3183a04 docs: format README with student info and screenshots
-0385a06 docs: add mobile screenshot to README
-1624460 docs: add app preview and usage guide
-5433539 docs: refresh README and add gitignore
-0e107be Initial commit
-```
+| Commit | Keterangan |
+| --- | --- |
+| `0e107be` | Menambahkan file awal aplikasi |
+| `5433539` | Merapikan README dan menambahkan `.gitignore` |
+| `1624460` | Menambahkan panduan penggunaan dan preview |
+| `0385a06` | Menambahkan screenshot mobile |
+| `3183a04` | Menyesuaikan README dengan identitas dan format tugas |
+| `dfe8009` | Menambahkan screenshot penuh desktop dan mobile |
 
 ## Teknologi
 
-- HTML5
-- CSS3
-- JavaScript
-- `localStorage`
+HTML, CSS, dan JavaScript. Data nama tamu terakhir serta riwayat pesanan disimpan di `localStorage` browser.
